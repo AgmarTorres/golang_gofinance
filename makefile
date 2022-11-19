@@ -16,4 +16,7 @@ migrateUp:
 migrateDown:
 	migrate -path db/migration -database "postgresql://postgres:postgres@localhost:5432/go_finance?sslmode=disable" -verbose drop
 
+sqlc:
+	docker run --rm -v $(pwd):/src -w /src kjconroy/sqlc generate
+
 .PHONY: createdb postgres
