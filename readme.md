@@ -75,3 +75,8 @@ go mod init tiny
 # para gerar os arquivos da pastas sqlc
 ele pega os dados do sqlc.yaml e executa
   sudo docker run --rm -v $(pwd):/src -w /src kjconroy/sqlc generate
+
+
+# Install libs
+go get github.com/lib/pq
+go get github.com/stretchr/testify
